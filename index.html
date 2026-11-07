@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Traffic Simulator</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Mini Traffic Simulation</h1>
+    </header>
+    <section class="trafficbuttons">
+        <h2>Traffic Intersection</h2>
+        
+        <div class="lightnroad-container">
+            <div class="traffic-light">
+                <div id="redLight" class="light"></div>
+                <div id="yellowLight" class="light"></div>
+                <div id="greenLight" class="light"></div>
+            </div>
+
+            <div class="road">
+                <div class="road-line"></div>
+             <div class="carandtruck car" id="car">🚗</div>
+                 <div class="carandtruck truck" id="truck">🚚</div>
+            </div>
+        </div>
+
+    <h2 id="message">WAITING FOR INPUT...</h2>
+
+        <div class="buttons">
+          <button class="stop-btn" onclick="stopLight()">STOP</button>
+            <button class="ready-btn" onclick="readyLight()">WAIT</button>
+              <button class="go-btn" onclick="goLight()">GO</button>
+        </div>
+    </section>
+
+    <div class="form-section">
+        <h2>Vehicle Registration Form</h2>
+        <form id="vehicleForm">
+            <div class="form-group">
+                <label for="name">Driver's Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            
+ <div class="form-group">
+        <label for="vehicleType">Type of Vehicle:</label>
+                <select id="vehicleType" name="vehicletype" required>
+            <option value="" disabled selected hidden>Select vehicle type</option>
+                   <option value="Car">Car</option>
+              <option value="Motorcycle">Motorcycle</option>
+          <option value="Bus">Bus</option>
+                    <option value="Truck">Truck</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="destination">Destination:</label>
+                <select id="destination" name="destination" required>
+                    <option value="" disabled selected hidden>Select destination</option>
+            <option value="North">North</option>
+                     <option value="South">South</option>
+                  <option value="East">East</option>
+                          <option value="West">West</option>
+ </select>
+    </div>
+            
+            <div class="form-group">
+        <label for="purpose">Purpose of Travel:</label>
+            <select id="purpose" name="purpose" required>
+        <option value="" disabled selected hidden>Select purpose of travel</option>
+                <option value="Personal">Personal</option>
+            <option value="School">School</option>
+                      <option value="Business">Business</option>
+    </select>
+            </div>
+            
+            <input type="submit" value="Register Vehicle" class="register">
+        </form>
+        
+        <div id="registrationSummary" class="receipt-card"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
